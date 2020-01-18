@@ -1,4 +1,4 @@
-name: N1-lmod-KP-adg-18-01-2020
+name: N1-lmod-KP-adg-18-01-2020v2
 
 on:
   push:
@@ -47,8 +47,8 @@ jobs:
         ./scripts/feeds install -a
     - name: Copy FileBrowser
       run: |
-        cd /home/runner/lede
-        cp -r -f /home/runner/lede/feeds/lienol/lienol/luci-app-filebrowser /home/runner/lede/package/feeds/lienol/
+        cd /home/runner/lede/feeds/lienol/lienol
+        cp -r -f luci-app-filebrowser /home/runner/lede/package/feeds/lienol/
     - name: Clone config
       run: |
         cd /home/runner/lede/
